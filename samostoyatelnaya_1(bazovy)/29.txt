@@ -1,0 +1,13 @@
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double a, b, h, p;
+    cout << "Enter the values of the bases and height: ";
+    cin >> a >> b >> h;
+    p = a + b + 2 * sqrt(h*h + ((b-a)/2)*((b-a)/2));
+    cout << "Perimeter of the trapezoid is " << p << endl;
+    return 0;
+}

@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float a, b, sum, difference, product, quotient;
+
+    cout << "Enter two non-zero numbers: ";
+    cin >> a >> b;
+
+    sum = a * a + b * b;
+    difference = a * a - b * b;
+    product = a * a * b * b;
+    quotient = a * a / (b * b);
+
+    cout << "Sum of squares is: " << sum << endl;
+    cout << "Difference of squares is: " << difference << endl;
+    cout << "Product of squares is: " << product << endl;
+    cout << "Quotient of squares is: " << quotient << endl;
+
+    return 0;
+}
+

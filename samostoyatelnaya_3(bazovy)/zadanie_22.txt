@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main() {
+    float price;
+    cout << "Enter the price of 1 kg of candy: ";
+    cin >> price;
+    for (int i = 100; i <= 2000; i+=100) {
+        cout << i << "g of candy costs $" << (price/1000)*i << endl;
+    }
+    return 0;
+}

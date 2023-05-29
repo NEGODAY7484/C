@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double a;
+    cout << "Enter a number: ";
+    cin >> a;
+    for(int i=1; ;i++){
+        double num = 1 + 1.0/i;
+        if(num<a){
+            cout << num << " ";
+        } else {
+            break;
+        }
+    }
+    return 0;
+}

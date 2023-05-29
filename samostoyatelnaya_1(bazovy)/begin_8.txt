@@ -1,0 +1,17 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    float a, b, average;
+
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+
+    average = (a + b) / 2;
+
+    cout << "Average of " << a << " and " << b << " is: " << average << endl;
+
+    return 0;
+}
+

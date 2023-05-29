@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double a, b;
+    
+    cout << "Enter values of a and b (a != 0): ";
+    cin >> a >> b;
+    
+    double x = -b / a;
+    
+    cout << "Solution: x = " << x << endl;
+    
+    return 0;
+}
+

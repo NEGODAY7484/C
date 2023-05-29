@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    double m, a, a_t, u; // входные данные: масса, угол, ускорение, коэффициент трения
+    double g = 9.81; // ускорение свободного падения
+    double Ft; // сила трения
+    
+    cout << "Введите массу тела (кг): ";
+    cin >> m;
+    cout << "Введите угол (градусы): ";
+    cin >> a;
+    cout << "Введите ускорение (м/с^2): ";
+    cin >> a_t;
+    
+    double sin_a = sin(a * M_PI / 180);
+    double cos_a = cos(a * M_PI / 180);
+    
+    u = (g * sin_a - a_t) / (g * cos_a);
+    
+    cout << "Коэффициент трения: " << u << endl;
+    
+    return 0;
+}

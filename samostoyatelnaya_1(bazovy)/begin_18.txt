@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double A, B, C, AC, BC, product;
+    cout << "Enter the coordinates of point A: ";
+    cin >> A;
+    cout << "Enter the coordinates of point B: ";
+    cin >> B;
+    cout << "Enter the coordinates of point C: ";
+    cin >> C;
+    AC = abs(C - A);
+    BC = abs(C - B);
+    product = AC * BC;
+    cout << "Product of lengths of AC and BC: " << product << endl;
+    return 0;
+}

@@ -1,0 +1,12 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double x = 2, sum = 0;
+    for(int i = 1; i <= 11; i++) {
+        sum += static_cast<double>(pow(-1, i+1)*i)/((i+1)*pow(x,i));
+    }
+    cout << "Сумма 1-2/3 *x + 3/4 * x^3 + ...+11/12 * x^10 при x=2: " << sum << endl;
+    return 0;
+}

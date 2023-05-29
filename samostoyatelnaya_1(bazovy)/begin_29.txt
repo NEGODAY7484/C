@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a;
+    const double pi = 3.14;
+    cout << "Enter the value of angle a in degrees: ";
+    cin >> a;
+    double radians = a*pi/180;
+    cout << "Value of angle a in radians: " << radians << endl;
+    return 0;
+}

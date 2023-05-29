@@ -1,0 +1,69 @@
+а)
+
+#include <iostream>
+using namespace std;
+int main() {
+    float sum = 0;
+    for (int i = 1; i <= 1000; i++) {
+        sum += i;
+    }
+    float average = sum/1000;
+    cout << "The arithmetic mean of all integers from 1 to 1000 is: " << average << endl;
+    return 0;
+}
+
+б)
+
+#include <iostream>
+using namespace std;
+int main() {
+    int b;
+    cout << "Enter a value for b: ";
+    cin >> b;
+    float sum = 0;
+    f
+or (int i = 100; i <= b; i++) {
+        sum += i;
+    }
+    float average = sum/(b-99);
+    cout << "The arithmetic mean of all integers from 100 to " << b << " is: " << average << endl;
+    return 0;
+}
+
+в)
+
+#include <iostream>
+using namespace std;
+int main() {
+    int a, b;
+    cout << "Enter a value for a: ";
+    cin >> a;
+    cout << "Enter a value for b (greater than or equal to a): ";
+    cin >> b;
+    float sum = 0;
+    for (int i = a; i <= 200; i++) {
+        sum += i;
+    }
+    float average = sum/201;
+    cout << "The arithmetic mean of all integers from " << a << " to 200 is: " << average << endl;
+    return 0;
+}
+
+г)
+
+#include <iostream>
+using namespace std;
+int main() {
+    int a, b;
+    cout << "Enter a value for a: ";
+    cin >> a;
+    cout << "Enter a value for b (greater than or equal to a): ";
+    cin >> b;
+    float sum = 0;
+    for (int i = a; i <= b; i++) {
+        sum += i;
+    }
+    float average = sum/(b-a+1);
+    cout << "The arithmetic mean of all integers from " << a << " to " << b << " is: " << average << endl;
+    return 0;
+}

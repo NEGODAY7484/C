@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x;
+    cin >> x;
+    int a = x / 1000;
+    int b = (x - a * 1000) / 100;
+    int c = (x - a * 1000 - b * 100) / 10;
+    int d = x % 10;
+    if (a == d && b == c) {
+        cout << "True";
+    } else {
+        cout << "False";
+    }
+    return 0;
+}

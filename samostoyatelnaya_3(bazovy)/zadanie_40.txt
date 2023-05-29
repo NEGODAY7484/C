@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    double sum = 0, a;
+    cout << "Введите значение n: ";
+    cin >> n;
+    for(int i = 1; i <= n; i++) {
+        cout << "Введите число a" << i << ": ";
+        cin >> a;
+        sum += a;
+    }
+    cout << "Сумма всех чисел: " << sum << endl;
+    return 0;
+}

@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N;
+    cout << "Enter an integer: ";
+    cin >> N;
+    double sum = 0;
+    bool add = true;
+    for(int i=1; i<=N; i++){
+        if(add){
+            sum += i*0.1;
+            add = false;
+        } else {
+            sum -= i*0.1;
+            add = true;
+        }
+    }
+    cout << "Sum: " << sum;
+    return 0;
+}

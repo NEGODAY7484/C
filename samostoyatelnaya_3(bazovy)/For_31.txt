@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter n (n > 0): ";
+    cin >> n;
+    double a = 2;
+    cout << "A_0 = " << a << endl;
+    for (int i = 1; i <= n; i++) {
+        a = 2 + 1 / a;
+        cout << "A_" << i << " = " << a << endl;
+    }
+    return 0;
+}
+

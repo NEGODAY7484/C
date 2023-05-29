@@ -1,0 +1,15 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double a, b, c, v, s;
+    cout << "Enter the values of the sides: ";
+    cin >> a >> b >> c;
+    v = a * b * c;
+    s = 2 * (a*b + b*c + a*c);
+    cout << "Volume is " << v << endl;
+    cout << "Surface area is " << s << endl;
+    return 0;
+}
+

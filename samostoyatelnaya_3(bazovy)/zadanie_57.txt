@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double grades1[4];
+    double grades2[4];
+    double sum1 = 0, sum2 = 0;
+    for (int i = 0; i < 4; i++) {
+        cin >> grades1[i];
+        sum1 += grades1[i];
+    }
+    for (int i = 0; i < 4; i++) {
+        cin >> grades2[i];
+        sum2 += grades2[i];
+    }
+    cout << "Сумма оценок первого ученика: " << sum1 << endl;
+    cout << "Сумма оценок второго ученика: " << sum2 << endl;
+    return 0;
+}

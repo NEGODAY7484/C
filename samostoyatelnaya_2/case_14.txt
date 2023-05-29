@@ -1,0 +1,42 @@
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int num, val;
+    cin >> num >> val;
+    switch(num) {
+        case 1: {
+            double R1 = pow(val,3)/6;
+            double R2 = R1 * 2;
+            double S = pow(val,2)*sqrt(3)/4;
+            cout << "R1 = " << R1 << ", R2 = " << R2 << ", S = " << S << endl;
+            break;
+        }
+        case 2: {
+            double a = cbrt(val*6);
+            double R2 = val * 2;
+            double S = pow(a,2)*sqrt(3)/4;
+            cout << "a = " << a << ", R2 = " << R2 << ", S = " << S << endl;
+            break;
+        }
+        case 3: {
+            double R1 = val / 2;
+            double a = cbrt(R1*6);
+            double S = pow(a,2)*sqrt(3)/4;
+            cout << "a = " << a << ", R1 = " << R1 << ", S = " << S << endl;
+            break;
+        }
+        case 4: {
+            double a = sqrt(val*4/sqrt(3));
+            double R1 = pow(a,3)/6;
+            double R2 = R1 * 2;
+            cout << "a = " << a << ", R1 = " << R1 << ", R2 = " << R2 << endl;
+            break;
+        }
+        default:
+            cout << "Invalid input" << endl;
+    }
+    return 0;
+}

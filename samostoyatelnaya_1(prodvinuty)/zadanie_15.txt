@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    double m, a, u; // входные данные: масса, угол, коэффициент трения
+    double g = 9.81; // ускорение свободного падения
+    double F; // сила натяжения нити
+    
+    cout << "Введите массу тела (кг): ";
+    cin >> m;
+    cout << "Введите угол (градусы): ";
+    cin >> a;
+    cout << "Введите коэффициент трения: ";
+    cin >> u;
+
+    double sin_a = sin(a * M_PI / 180);
+    double cos_a = cos(a * M_PI / 180);
+    
+    F = (tan(a * M_PI / 180) < u) ? 0 : m * g * (sin_a - u * cos_a);
+
+    cout << "Сила натяжения нити: " << F << " Н" << endl;
+    
+    return 0;
+}

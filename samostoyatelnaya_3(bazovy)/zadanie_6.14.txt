@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double a;
+    cout << "Enter a number between 1 and 1.5: ";
+    cin >> a;
+    int n;
+    for(n=2; ;n++){
+        double num = 1 + 1.0/n;
+        if(num<a){
+            break;
+        }
+    }
+    cout << n << endl;
+    return 0;
+}

@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int sum = 0, mark;
+    for(int i = 1; i <= 4; i++) {
+        cout << "Введите оценку за экзамен " << i << ": ";
+        cin >> mark;
+        sum += mark;
+    }
+    cout << "Сумма набранных баллов: " << sum << endl;
+    return 0;
+}

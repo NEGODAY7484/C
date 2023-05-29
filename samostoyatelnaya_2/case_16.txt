@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int age;
+    cin >> age;
+    if (age < 20 || age > 69) {
+        cout << "Invalid input" << endl;
+        return 0;
+    }
+    int last_digit = age % 10;
+    int second_last_digit = (age / 10) % 10;
+    switch(second_last_digit) {
+        case 2: cout << "двадцать "; break;
+        case 3: cout << "тридцать "; break;
+        case 4: cout << "сорок "; break;
+    }
+    switch(last_digit) {
+        case 1: cout << "один год"; break;
+        case 2: cout << "два года"; break;
+        case 3: cout << "три года"; break;
+        case 4: cout << "четыре года"; break;
+        case 5: cout << "пять лет"; break;
+        case 6: cout << "шесть лет"; break;
+        case 7: cout << "семь лет"; break;
+        case 8: cout << "восемь лет"; break;
+        case 9: cout << "девять лет"; break;
+    }
+    cout << endl;
+    return 0;
+}
+

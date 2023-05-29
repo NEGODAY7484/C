@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num;
+    cout << "Enter a number between 1 and 999: ";
+    cin >> num;
+
+    if (num < 10) {
+        if (num % 2 == 0) {
+            cout << "четное однозначное число";
+        } else {
+            cout << "нечетное однозначное число";
+        }
+    } else if (num < 100) {
+        if (num % 2 == 0) {
+            cout << "четное двузначное число";
+        } else {
+            cout << "нечетное двузначное число";
+        }
+    } else {
+        if (num % 2 == 0) {
+            cout << "четное трехзначное число";
+        } else {
+            cout << "нечетное трехзначное число";
+        }
+    }
+
+    return 0;
+}

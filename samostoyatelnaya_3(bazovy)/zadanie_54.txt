@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double grades[20];
+    double sum = 0;
+    for (int i = 0; i < 20; i++) {
+        cin >> grades[i];
+        sum += grades[i];
+    }
+    double average = sum / 20;
+    cout << "Средняя оценка: " << average << endl;
+    return 0;
+}

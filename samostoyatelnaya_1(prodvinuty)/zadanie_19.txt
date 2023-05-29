@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int N;
+    double T, t;
+    cout << "Введите начальное количество ядер N: ";
+    cin >> N;
+    cout << "Введите период полураспада T: ";
+    cin >> T;
+    cout << "Введите время t: ";
+    cin >> t;
+    double deltaM = N * (1 - exp(-t * log(2) / T));
+    double percentDeltaM = deltaM / N * 100;
+    cout << "Число распавшихся ядер ΔM: " << deltaM << endl;
+    cout << "Процент распавшихся ядер ΔM от начального количества: " << percentDeltaM << "%" << endl;
+    return 0;
+}

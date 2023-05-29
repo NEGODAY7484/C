@@ -1,0 +1,87 @@
+а)
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, k, f1 = 1, f2 = 1, fn;
+    cin >> n >> k;
+    
+    // находим k-й член последовательности
+    for (int i = 3; i <= k; i++) {
+        fn = f1 + f2;
+        f1 = f2;
+        f2 = fn;
+    }
+    cout << fn << endl;
+    
+    // выводим первые n членов последовательности
+    f1 = 1;
+    f2 = 1;
+    cout << "1 1 ";
+    for (int i = 3; i <= n; i++) {
+        fn = f1 + f2;
+        f1 = f2;
+        f2 = fn;
+        cout << fn << " ";
+    }
+    cout << endl;
+    
+    // проверяем, является ли сумма первых n членов четной
+    f1 = 1;
+    f2 = 1;
+    int sum = 2;
+    for (int i = 3; i <= n; i++) {
+        fn = f1 + f2;
+        f1 = f2;
+        f2 = fn;
+        sum += fn;
+    }
+    if (sum % 2 == 0) {
+        cout << "Sum is even" << endl;
+    } else {
+        cout << "Sum is odd" << endl;
+    }
+    return 0;
+}
+
+б)
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, f1 = 1, f2 = 1, fn;
+    cin >> n;
+    
+    // выводим первые n членов последовательности
+    cout << "1 1 ";
+    for (int i = 3; i <= n; i++) {
+        fn = f1 + f2;
+        f1 = f2;
+        f2 = fn;
+        cout << fn << " ";
+    }
+    cout << endl;
+    return 0;
+}
+в)
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, f1 = 1, f2 = 1, fn, sum = 2;
+    cin >> n;
+    
+    // проверяем, является ли сумма первых n членов четной
+    for (int i = 3; i <= n; i++) {
+        fn = f1 + f2;
+        f1 = f2;
+        f2 = fn;
+        sum += fn;
+    }
+    if (sum % 2 == 0) {
+        cout << "Sum is even" << endl;
+    } else {
+        cout << "Sum is odd" << endl;
+    }
+    return 0;
+}

@@ -1,0 +1,11 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+    double a, y;
+    cout << "Введите а: ";
+    cin >> a;
+    y = (a*a + 1)/(sqrt(a*a + 1));
+    cout << "y = " << y << endl;
+    return 0;
+}

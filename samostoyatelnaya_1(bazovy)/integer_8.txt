@@ -1,0 +1,14 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin >> n;
+    int tens = n / 10;
+    int ones = n % 10;
+    int reversed = ones * 10 + tens;
+    cout << "Reversed: " << reversed << endl;
+    return 0;
+}

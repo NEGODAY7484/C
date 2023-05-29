@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    const double inchesToCm = 2.54;
+    for (int i = 10; i <= 22; i++) {
+        cout << i << " дюймов: " << i*inchesToCm << " сантиметров" << endl;
+    }
+    return 0;
+}

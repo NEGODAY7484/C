@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, salary, sum = 0;
+    cout << "Введите количество сотрудников: ";
+    cin >> n;
+    for(int i = 1; i <= n; i++) {
+        cout << "Введите зарплату сотрудника " << i << ": ";
+        cin >> salary;
+        sum += salary;
+    }
+    cout << "Общая зарплата сотрудников: " << sum << endl;
+    return 0;
+}

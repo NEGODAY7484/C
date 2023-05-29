@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int A, B, N = 0;
+    cout << "Enter two integers: ";
+    cin >> A >> B;
+    for(int i=B-1; i>A; i--){
+        if(i%2==0){
+            cout << i << " ";
+            N++;
+        }
+    }
+    cout << endl << "Count: " << N;
+    return 0;
+}

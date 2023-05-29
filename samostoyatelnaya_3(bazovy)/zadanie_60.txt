@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int jan[31];
+    int feb[28];
+    int mar[31];
+    int sum1 = 0, sum2 = 0, sum3 = 0;
+    for (int i = 0; i < 31; i++) {
+        cin >> jan[i];
+        sum1 += jan[i];
+    }
+    for (int i = 0; i < 28; i++) {
+        cin >> feb[i];
+        sum2 += feb[i];
+    }
+    for (int i = 0; i < 31; i++) {
+        cin >> mar[i];
+        sum3 += mar[i];
+    }
+    double avg1 = sum1 / 31;
+    double avg2 = sum2 / 28;
+    double avg3 = sum3 / 31;
+    cout << "Среднедневное количество осадков в январе: " << avg1 << endl;
+    cout << "Среднедневное количество осадков в феврале: " << avg2 << endl;
+    cout << "Среднедневное количество осадков в марте: " << avg3 << endl;
+    return 0;
+}

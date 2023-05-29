@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double x1, y1, x2, y2, perimeter, area;
+    cout << "Enter the coordinates of the opposite corners of the rectangle: " << endl;
+    cin >> x1 >> y1 >> x2 >> y2;
+    double length = abs(x2 - x1);
+    double width = abs(y2 - y1);
+    perimeter = 2*(length + width);
+    area = length * width;
+    cout << "Perimeter of the rectangle: " << perimeter << endl;
+    cout << "Area of the rectangle: " << area << endl;
+    return 0;
+}

@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    double m, a, u; // входные данные: масса, угол, коэффициент трения
+    double g = 9.81; // ускорение свободного падения
+    double Ft; // сила трения
+    
+    cout << "Введите массу тела (кг): ";
+    cin >> m;
+    cout << "Введите угол (градусы): ";
+    cin >> a;
+    
+    double sin_a = sin(a * M_PI / 180);
+    
+    Ft = m * g * sin_a;
+    Ft = abs(Ft) < 1e-6 ? 0 : Ft; // проверка на близость к 0
+
+    Ft = (abs(Ft) > m * g * cos(a * M_PI / 180)) ? m * g * cos(a * M_PI / 180) : Ft;
+
+    cout << "Сила трения: " << Ft << " Н" << endl;
+    
+    return 0;
+}

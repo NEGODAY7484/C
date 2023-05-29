@@ -1,0 +1,60 @@
+а)
+#include <iostream>
+#include <cmat
+h>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter n: ";
+    cin >> n;
+    double sum = 0.0;
+    double sin_sum = 0.0;
+    for (int i = 1; i <= n; i++) {
+        sin_sum += sin(i); // добавляем sin(i) к текущей сумме
+        sum += 1 / sin_sum; // добавляем слагаемое к сумме
+    }
+    cout << "Result a): " << sum << endl;
+    return 0;
+}
+
+b)
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter n: ";
+    cin >> n;
+    double result = 2.0;
+    for (int i = 2; i <= n; i++) {
+        result = sqrt(2.0 + result);
+    }
+    cout << "Result b): " << result << endl;
+    return 0;
+}
+
+c)
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter n: ";
+    cin >> n;
+    double sum = 0.0;
+    double sin_sum = 0.0;
+    double cos_sum = 0.0;
+    for (int i = 1; i <= n; i++) {
+        sin_sum += sin(i); // добавляем sin(i) к текущей сумме
+        cos_sum += cos(i); // добавляем cos(i) к текущей сумме
+        sum += cos_sum / sin_sum; // добавляем слагаемое к сумме
+    }
+    cout << "Result c): " << sum << endl;
+    return 0;
+}
+

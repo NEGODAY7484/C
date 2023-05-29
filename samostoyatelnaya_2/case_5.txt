@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int N;
+    float A, B;
+    cin >> N >> A >> B;
+    float result;
+    switch(N) {
+        case 1:
+            result = A + B;
+            break;
+        case 2:
+            result = A - B;
+            break;
+        case 3:
+            result = A * B;
+            break;
+        case 4:
+            result = A / B;
+            break;
+        default:
+            cout << "ошибка";
+            return 0;
+    }
+    cout << result;
+    return 0;
+}
+

@@ -1,0 +1,51 @@
+#include <iostream>
+
+int main() {
+    int a = 2;
+
+    // а) a^3 и a^10 за четыре операции;
+    int a2 = a * a;
+    int a3 = a * a2;
+    int a4 = a2 * a2;
+    int a10 = a4 * a4 * a2;
+
+    // б) a^4 и a^20 за пять операций;
+    int a2 = a * a;
+    int a4 = a2 * a2;
+    int a8 = a4 * a4;
+    int a16 = a8 * a8;
+    int a20 = a16 * a4 * a;
+
+    // в) a^5 и a^13 за пять операций;
+    int a2 = a * a;
+    int a4 = a2 * a2;
+    int a8 = a4 * a4;
+    int a13 = a8 * a4 * a;
+    int a5 = a13 / (a * a * a * a * a);
+
+    // г) a^5 и a^19 за пять операций;
+    int a2 = a * a;
+    int a4 = a2 * a2;
+    int a8 = a4 * a4;
+    int a16 = a8 * a8;
+    int a19 = a16 * a2 * a;
+    int a5 = a19 / (a * a * a * a * a);
+
+    // д) a^2 и a^17 за шесть операций;
+    int a2 = a * a;
+    int a4 = a2 * a2;
+    int a8 = a4 * a4;
+    int a16 = a8 * a8;
+    int a17 = a16 * a;
+    int a2 = a17 / (a * a * a * a * a);
+
+    // е) a^4, a^12 и a^28 зa шесть операций,
+    int a2 = a * a;
+    int a4 = a2 * a2;
+    int a8 = a4 * a4;
+    int a16 = a8 * a8;
+    int a12 = a8 * a4;
+    int a28 = a16 * a12;
+
+    return 0;
+}

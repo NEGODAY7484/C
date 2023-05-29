@@ -1,0 +1,20 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    double v, t, a;
+    const double g = 9.8; // ускорение свободного падения
+    
+    cout << "Введите начальную скорость тела: ";
+    cin >> v;
+    cout << "Введите время полета тела: ";
+    cin >> t;
+    
+    a = asin(g * t / (2 * v)) * 180 / M_PI;
+    
+    cout << "Угол броска тела относительно горизонта: " << a << " градусов" << endl;
+    
+    return 0;
+}

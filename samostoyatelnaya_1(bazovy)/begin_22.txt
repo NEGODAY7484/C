@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int A, B;
+    cout << "Enter the values of A and B: " << endl;
+    cin >> A >> B;
+    int temp = A;
+    A = B;
+    B = temp;
+    cout << "A = " << A << ", B = " << B << endl;
+    return 0;
+}

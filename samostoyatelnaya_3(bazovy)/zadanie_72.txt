@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double distance = 10;
+    double increase = 0.1;
+    
+    // пробег лыжника за первые 10 дней
+    for (int i = 2; i <= 10; i++) {
+        distance += distance * increase;
+        cout << "Day " << i << ": " << distance << " km" << endl;
+    }
+    
+    // суммарный путь за первые 7 дней
+    double total_distance = 10;
+    for (int i = 2; i <= 7; i++) {
+        distance += distance * increase;
+        total_distance += distance;
+    }
+    cout << "Total distance for the first 7 days: " << total_distance << " km" << endl;
+    return 0;
+}

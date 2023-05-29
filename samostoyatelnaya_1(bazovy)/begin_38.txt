@@ -1,0 +1,13 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float A, B;
+    cin >> A >> B;
+    float x = -B / A;
+    cout << "Solution: " << x << endl;
+    return 0;
+}
+

@@ -1,0 +1,22 @@
+// a
+#include <iostream>
+using namespace std;
+int main() {
+    double x, y;
+    cout << "Enter x: ";
+    cin >> x;
+    y = 7*x*x - 3*x + 6;
+    cout << "y = " << y << endl;
+    return 0;
+}
+// б
+#include <iostream>
+using namespace std;
+int main() {
+    double a, x;
+    cout << "Enter a: ";
+    cin >> a;
+    x = 12*a*a + 7*a - 16;
+    cout << "x = " << x << endl;
+    return 0;
+}

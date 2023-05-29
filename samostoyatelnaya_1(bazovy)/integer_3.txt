@@ -1,0 +1,11 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int fileSize;
+    cin >> fileSize;
+    cout << fileSize / 1024 << endl;
+    return 0;
+}

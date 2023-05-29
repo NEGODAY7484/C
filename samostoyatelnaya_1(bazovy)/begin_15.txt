@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double S, D, L;
+    const double pi = 3.14;
+    cout << "Enter the area of the circle: ";
+    cin >> S;
+    D = sqrt((4*S)/pi);
+    L = pi*D;
+    cout << "Diameter of the circle: " << D << endl;
+    cout << "Circumference of the circle: " << L << endl;
+    return 0;
+}

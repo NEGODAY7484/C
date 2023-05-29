@@ -1,0 +1,15 @@
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter n: ";
+    cin >> n;
+    int i = sqrt(n) + 1; // начинаем с того числа, которое больше n
+    int square = i*i;
+    cout << "First number greater than n: ";
+    cout << square << endl;
+    return 0;
+}

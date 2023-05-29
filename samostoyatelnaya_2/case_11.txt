@@ -1,0 +1,70 @@
+#include <iostream>
+using namespace std;
+int main() {
+    char dir;
+    int N1, N2;
+    cin >> dir >> N1 >> N2;
+    switch(dir) {
+        case 'С':
+            if (N1 == 1) {
+                dir = 'З';
+            } else if (N1 == -1) {
+                dir = 'В';
+            }
+            break;
+        case 'З':
+            if (N1 == 1) {
+                dir = 'Ю';
+            } else if (N1 == -1) {
+                dir = 'С';
+            }
+            break;
+        case 'Ю':
+            if (N1 == 1) {
+                dir = 'В';
+            } else if (N1 == -1) {
+                dir = 'З';
+            }
+            break;
+        case 'В':
+            if (N1 == 1) {
+                dir = 'С';
+            } else if (N1 == -1) {
+                dir = 'Ю';
+            }
+            break;
+    }
+    if (N2 == 2) {
+        switch(dir) {
+            case 'С':
+                dir = 'Ю';
+                break;
+            case 'З':
+                dir = 'В';
+                break;
+            case 'Ю':
+                dir = 'С';
+                break;
+            case 'В':
+                dir = 'З';
+                break;
+        }
+    } else if (N2 == -1) {
+        switch(dir) {
+            case 'С':
+                dir = 'В';
+                break;
+            case 'З':
+                dir = 'Ю';
+                break;
+            case 'Ю':
+                dir = 'З';
+                break;
+            case 'В':
+                dir = 'С';
+                break;
+        }
+    }
+    cout << dir;
+    return 0;
+}

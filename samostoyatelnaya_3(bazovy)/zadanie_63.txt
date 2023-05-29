@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double areas[10];
+    double yields[10];
+    double sum_area = 0, sum_yield = 0;
+    for (int i = 0; i < 10; i++) {
+        cin >> areas[i] >> yields[i];
+        sum_area += areas[i];
+        sum_yield += yields[i];
+    }
+    double total_yield = sum_area * (sum_yield / 10);
+    double avg_yield = sum_yield / 10;
+    cout << "Количество собранной пшеницы в области: " << total_yield << endl;
+    cout << "Средняя урожайность по области: " << avg_yield << " т/га" << endl;
+    return 0;
+}

@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int A, B, C;
+    cin >> A >> B >> C;
+    int count = (A / C) * (B / C); // количество квадратов
+    int freeArea = A * B - count * C * C; // площадь незанятой части
+    cout << "Количество квадратов: " << count << endl;
+    cout << "Площадь незанятой части: " << freeArea;
+    return 0;
+}

@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int A, B, C;
+    cout << "Enter the values of A, B, and C: " << endl;
+    cin >> A >> B >> C;
+    int temp1 = A;
+    int temp2 = B;
+    A = C;
+    B = temp1;
+    C = temp2;
+    cout << "A = " << A << ", B = " << B << ", C = " << C << endl;
+    return 0;
+}

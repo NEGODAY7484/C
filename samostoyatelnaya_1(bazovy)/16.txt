@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float a, p;
+    cout << "Enter the value of a: ";
+    cin >> a;
+    p = 4*a;
+    cout << "The perimeter of the square is: " << p << endl;
+    return 0;
+}

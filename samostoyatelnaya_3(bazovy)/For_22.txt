@@ -1,0 +1,15 @@
+#include <iostream>
+#include <cmath>
+
+int main() {
+    double x, result = 1, power = 1, factorial = 1;
+    int n;
+    std::cin >> x >> n;
+    for (int i = 1; i <= n; i++) {
+        power *= x;
+        factorial *= i;
+        result += power / factorial;
+    }
+    std::cout << result;
+    return 0;
+}

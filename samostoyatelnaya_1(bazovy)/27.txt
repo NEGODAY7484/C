@@ -1,0 +1,18 @@
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double outer_radius, inner_radius;
+    const double pi = 3.14159;
+    
+    cout << "Enter the values of the inner and outer radii: ";
+    cin >> inner_radius >> outer_radius;
+    
+    double area = pi * (outer_radius*outer_radius - inner_radius*inner_radius);
+    
+    cout << "Area of ring: " << area << endl;
+    
+    return 0;
+}

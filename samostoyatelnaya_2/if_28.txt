@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int year, days;
+    cin >> year;
+    if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) {
+        days = 366;
+    } else {
+        days = 365;
+    }
+    cout << days << endl;
+    return 0;
+}

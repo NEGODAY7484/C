@@ -1,0 +1,18 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int population;
+    double area;
+    
+    cout << "Enter the population and area of the country: ";
+    cin >> population >> area;
+    
+    double density = population / area;
+    
+    cout << "Population Density: " << density << endl;
+    
+    return 0;
+}
+

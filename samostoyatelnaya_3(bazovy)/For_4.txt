@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double price;
+    cout << "Enter price per kg: ";
+    cin >> price;
+    for(int i=1; i<=10; i++){
+        cout << i << " kg: " << i*price << endl;
+    }
+    return 0;
+}

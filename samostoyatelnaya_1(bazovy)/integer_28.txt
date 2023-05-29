@@ -1,0 +1,12 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int k, n;
+    cin >> k >> n;
+    int dayOfWeek = (k + n - 2) % 7;
+    if (dayOfWeek == 0) dayOfWeek = 7;
+    cout << dayOfWeek;
+    return 0;
+}

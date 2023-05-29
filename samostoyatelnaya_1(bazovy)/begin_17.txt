@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double A, B, C, AC, BC, sum;
+    cout << "Enter the coordinates of point A: ";
+    cin >> A;
+    cout << "Enter the coordinates of point B: ";
+    cin >> B;
+    cout << "Enter the coordinates of point C: ";
+    cin >> C;
+    AC = abs(C - A);
+    BC = abs(C - B);
+    sum = AC + BC;
+    cout << "Length of AC: " << AC << endl;
+    cout << "Length of BC: " << BC << endl;
+    cout << "Sum of lengths of AC and BC: " << sum << endl;
+    return 0;
+}

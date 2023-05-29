@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    double a[100];
+    cin >> n;
+    a[0] = 1;
+    for (int k = 1; k <= n; k++) {
+        a[k] = k * a[k - 1] + 1.0/k;
+    }
+    for (int k = 1; k <= n; k++) {
+        cout << "a" << k << " = " << a[k] << endl;
+    }
+    return 0;
+}

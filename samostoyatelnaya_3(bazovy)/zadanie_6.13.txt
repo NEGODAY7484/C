@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double a;
+    cout << "Enter a number between 1 and 1.5: ";
+    cin >> a;
+    for(int n=2; ;n++){
+        bool all_greater = true;
+        for(int i=2; i<=n; i++){
+            double num = 1 + 1.0/i;
+            if(num<a){
+                all_greater = false;
+                break;
+            }
+        }
+        if(all_greater){
+            cout << n << " ";
+        }
+    }
+    return 0;
+}

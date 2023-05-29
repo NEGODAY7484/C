@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int
+main() {
+    int N;
+    cout << "Enter an integer: ";
+    cin >> N;
+    double sum = 0;
+    for(int i=1; i<=N; i++){
+        sum += 1.0/i;
+    }
+    cout << "Sum: " << sum;
+    return 0;
+}
+

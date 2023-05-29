@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    const double poundsToKg = 0.453;
+    for (int i = 1; i <= 10; i++) {
+        cout << i << " фунтов: " << i*poundsToKg << " килограмм" << endl;
+    }
+    return 0;
+}

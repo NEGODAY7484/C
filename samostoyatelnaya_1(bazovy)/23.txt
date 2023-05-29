@@ -1,0 +1,17 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    double volume, mass;
+    
+    cout << "Enter the volume and mass of the body: ";
+    cin >> volume >> mass;
+    
+    double density = mass / volume;
+    
+    cout << "Density of material: " << density << endl;
+    
+    return 0;
+}
+

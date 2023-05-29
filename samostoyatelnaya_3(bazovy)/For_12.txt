@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N;
+    cout << "Enter an integer: ";
+    cin >> N;
+    double prod = 1.0;
+    for(int i=1; i<=N; i++){
+        prod *= 1.0+i*0.1;
+    }
+    cout << "Product: " << prod;
+    return 0;
+}
+

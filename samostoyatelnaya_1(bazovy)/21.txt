@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double x, y, z, a, b;
+    
+    cout << "Enter values of x and y: ";
+    cin >> x >> y;
+    
+    z = x*x*x - 2.5*x*y + 1.78*x*x - 12.5*y + 1;
+    
+    cout << "z = " << z << endl;
+    
+    cout << "Enter values of a and b: ";
+    cin >> a >> b;
+    
+    double c = a + b;
+    double d = b*b;
+    
+    x = 3.56*c*c*c - 5.8*d + 3.8*a - 1.5;
+    
+    cout << "x = " << x << endl;
+    
+    return 0;
+}
+

@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double A;
+    int N;
+    cout << "Enter a number: ";
+    cin >> A;
+    cout << "Enter an integer: ";
+    cin >> N;
+    double prod = 1;
+    for(int i=1; i<=N; i++){
+        prod *= A;
+    }
+    cout << A << " to the power of " << N << " = " << prod;
+    return 0;
+}

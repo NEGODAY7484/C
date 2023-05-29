@@ -1,0 +1,21 @@
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    double h, g;
+    const double G = 6.672 * pow(10, -11); // гравитационная постоянная
+    const double M = 5.96 * pow(10, 24); // масса Земли
+    const double R = 6.37 * pow(10, 6); // радиус Земли
+    
+    cout << "Введите высоту над поверхностью Земли: ";
+    cin >> h;
+    
+    g = G * M / pow(R + h, 2);
+    
+    cout << "Ускорение свободного падения на высоте " << h << " м: " << g << " м/с^2" << endl;
+    
+    return 0;
+}

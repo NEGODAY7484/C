@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double sum = 0, m;
+    for(int i = 1; i <= 12; i++) {
+        cout << "Введите массу предмета " << i
+<< ": ";
+        cin >> m;
+        sum += m;
+    }
+    cout << "Общая масса всех предметов: " << sum << endl;
+    return 0;
+}

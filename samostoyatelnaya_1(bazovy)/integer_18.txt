@@ -1,0 +1,12 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin >> n;
+    int thousands = n / 1000;
+    cout << "Thousands digit: " << thousands << endl;
+    return 0;
+}

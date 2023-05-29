@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float r, d;
+    cout << "Enter the value of the radius: ";
+    cin >> r;
+    d = 2*r;
+    cout << "The diameter of the circle is: " << d << endl;
+    return 0;
+}

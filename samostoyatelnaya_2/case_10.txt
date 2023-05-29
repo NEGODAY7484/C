@@ -1,0 +1,47 @@
+
+#include <iostream>
+using namespace std;
+int main() {
+    char dir;
+    int N;
+    cin >> dir >> N;
+    switch(dir) {
+        case 'С':
+            if (N == 1) {
+                cout << "З";
+            } else if (N == -1) {
+                cout << "В";
+            } else {
+                cout << "С";
+            }
+            break;
+        case 'З':
+            if (N == 1) {
+                cout << "Ю";
+            } else if (N == -1) {
+                cout << "С";
+            } else {
+                cout << "З";
+            }
+            break;
+        case 'Ю':
+            if (N == 1) {
+                cout << "В";
+            } else if (N == -1) {
+                cout << "З";
+            } else {
+                cout << "Ю";
+            }
+            break;
+        case 'В':
+            if (N == 1) {
+                cout << "С";
+            } else if (N == -1) {
+                cout << "Ю";
+            } else {
+                cout << "В";
+            }
+            break;
+    }
+    return 0;
+}

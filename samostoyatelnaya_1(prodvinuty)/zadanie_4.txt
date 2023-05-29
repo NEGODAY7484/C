@@ -1,0 +1,28 @@
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    double h, v, a, t, x, y;
+    const double g = 9.8; // ускорение свободного падения
+    
+    cout << "Введите высоту обрыва: ";
+    cin >> h;
+    cout << "Введите начальную скорость тела: ";
+    cin >> v;
+    cout << "Введите угол броска тела: ";
+    cin >> a;
+    cout << "Введите время полета тела: ";
+    cin >> t;
+    
+    x = v * t * cos(a * M_PI / 180);
+    y = h + v * t * sin(a * M_PI / 180) - g * t * t / 2;
+    
+    cout << "Высота камня над дном обрыва: " << (y < 0 ? 0 : y) << " м" << endl;
+    cout << "Расстояние до края обрыва: " << x << " м" << endl;
+    
+    return 0;
+}
+

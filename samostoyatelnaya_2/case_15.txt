@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N, M;
+    cin >> N >> M;
+    switch(N) {
+        case 6: cout << "шестерка "; break;
+        case 7: cout << "семерка "; break;
+        case 8: cout << "восьмерка "; break;
+        case 9: cout << "девятка "; break;
+        case 10: cout << "десятка "; break;
+        case 11: cout << "валет "; break;
+        case 12: cout << "дама "; break;
+        case 13: cout << "король "; break;
+        case 14: cout << "туз "; break;
+        default:
+            cout << "Invalid input" << endl;
+            return 0;
+    }
+    switch(M) {
+        case 1: cout << "пик"; break;
+        case 2: cout << "треф"; break;
+        case 3: cout << "бубен"; break;
+        case 4: cout << "червей"; break;
+        default:
+            cout << "Invalid input" << endl;
+    }
+    cout << endl;
+    return 0;
+}
+

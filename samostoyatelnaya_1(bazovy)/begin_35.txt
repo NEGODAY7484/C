@@ -1,0 +1,15 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float V, U, T1, T2;
+    cin >> V >> U >> T1 >> T2;
+    float S1 = V * T1;
+    float S2 = (V - U) * T2;
+    float S = S1 + S2;
+    cout << "Total distance traveled: " << S << endl;
+    return 0;
+}

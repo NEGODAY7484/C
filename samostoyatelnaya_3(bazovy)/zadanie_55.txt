@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double weights[10];
+    double sum = 0;
+    for (int i = 0; i < 10; i++) {
+        cin >> weights[i];
+        sum += weights[i];
+    }
+    double average = sum / 10;
+    cout << "Средняя масса: " << average << endl;
+    return 0;
+}

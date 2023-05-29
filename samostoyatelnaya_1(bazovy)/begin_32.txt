@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double Tc, Tf;
+    cout << "Enter the temperature in degrees Celsius: ";
+    cin >> Tc;
+    Tf = (Tc*9/5) + 32;
+    cout << "Temperature in degrees Fahrenheit: " << Tf << endl;
+    return 0;
+}

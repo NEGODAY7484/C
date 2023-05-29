@@ -1,0 +1,15 @@
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double a, b, avg_ar, avg_geo;
+    cout << "Enter the values of a and b: ";
+    cin >> a >> b;
+    avg_ar = (abs(a) + abs(b)) / 2;
+    avg_geo = sqrt(abs(a) * abs(b));
+    cout << "Arithmetic mean is " << avg_ar << endl;
+    cout << "Geometric mean is " << avg_geo << endl;
+    return 0;
+}

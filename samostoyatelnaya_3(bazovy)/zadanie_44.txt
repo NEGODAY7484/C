@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double sum = 0, w;
+    for(int i = 1; i <= 10; i++) {
+        cout << "Введите массу груза " << i << ": ";
+        cin >> w;
+        sum += w;
+    }
+    cout << "Общая масса груза: " << sum << endl;
+    return 0;
+}

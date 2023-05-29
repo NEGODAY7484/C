@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int A, B, prod = 1;
+    cout << "Enter two integers: ";
+    cin >> A >> B;
+    for(int i=A; i<=B; i++){
+        prod *= i;
+    }
+    cout << "Product: " << prod;
+    return 0;
+}
+

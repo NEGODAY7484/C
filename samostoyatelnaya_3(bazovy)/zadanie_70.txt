@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int hours[] = {3, 6, 9, 12, 15, 18, 21, 24}; // массив, хранящий время в часах
+    int ameba = 1;
+    for (int i = 0; i < 8; i++) {
+        int tmp = ameba * 2; // находим количество клеток через i-ый промежуток времени
+        cout << "After " << hours[i] << " hours: " << tmp << " cells" << endl;
+        ameba = tmp; // сохраняем количество клеток для следующего промежутка времени
+    }
+    return 0;
+}

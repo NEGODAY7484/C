@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double deposit = 1000;
+    double increase = 0.02;
+    
+    // прирост суммы вклада за первые 10 месяцев
+    for (int i = 1; i <= 10; i++) {
+        double growth = deposit * increase;
+        deposit += growth;
+        cout << "Month " << i << ": " << growth << " rubles" << endl;
+    }
+    
+    // сумма вклада через каждые 3 месяца
+    for (int i = 3; i <= 12; i += 3) {
+        double tmp = deposit;
+        for (int j = 1; j <= i; j++) {
+            tmp += tmp * increase;
+        }
+        cout << "After " << i << " months: " << tmp << " rubles" << endl;
+    }
+    return 0;
+}

@@ -1,0 +1,21 @@
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    double v, a, l;
+    const double g = 9.8; // ускорение свободного падения
+    
+    cout << "Введите начальную скорость тела: ";
+    cin >> v;
+    cout << "Введите угол броска тела: ";
+    cin >> a;
+    
+    l = (v * v * sin(2 * a * M_PI / 180)) / g;
+    
+    cout << "Дальность полета тела: " << l << " м" << endl;
+    
+    return 0;
+}

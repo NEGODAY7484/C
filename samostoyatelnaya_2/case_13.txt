@@ -1,0 +1,40 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+    int option;
+    float value;
+    cin >> option >> value;
+    float a, c, h, S;
+    switch(option) {
+        case 1:
+            a = value;
+            c = a * sqrt(2);
+            h = c / 2;
+            S = c * h / 2;
+            cout << c << " " << h << " " << S;
+            break;
+        case 2:
+            c = value;
+            a = c / sqrt(2);
+            h = c / 2;
+            S = c * h / 2;
+            cout << a << " " << h << " " << S;
+            break;
+        case 3:
+            h = value;
+            c = h * 2;
+            a = c / sqrt(2);
+            S = c * h / 2;
+            cout << a << " " << c << " " << S;
+            break;
+        case 4:
+            S = value;
+            h = sqrt(2 * S) / 2;
+            c = h * 2;
+            a = c / sqrt(2);
+            cout << a << " " << c << " " << h;
+            break;
+    }
+    return 0;
+}

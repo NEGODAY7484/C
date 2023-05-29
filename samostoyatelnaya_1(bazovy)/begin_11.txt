@@ -1,0 +1,22 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    float a, b, sum, difference, product, quotient;
+
+    cout << "Enter two non-zero numbers: ";
+    cin >> a >> b;
+
+    sum = abs(a) + abs(b);
+    difference = abs(a) - abs(b);
+    product = abs(a) * abs(b);
+    quotient = abs(a) / abs(b);
+
+    cout << "Sum of absolute values is: " << sum << endl;
+    cout << "Difference of absolute values is: " << difference << endl;
+    cout << "Product of absolute values is: " << product << endl;
+    cout << "Quotient of absolute values is: " << quotient << endl;
+
+    return 0;
+}

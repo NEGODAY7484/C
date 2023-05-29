@@ -1,0 +1,111 @@
+а)
+#include <iostream>
+using namespace std;
+
+int main() {
+    int k, n, num1 = 1, den1 = 1, num2 = 2, den2 = 1, num, den;
+    cin >> k;
+    
+    // находим k-ю дробь
+    for (int i = 3; i <= k; i++) {
+        num = num1 + num2;
+        den = den1 + den2;
+        num1 = num2;
+        den1 = den2;
+        num2 = num;
+        den2 = den;
+    }
+    cout << num << "/" << den << endl;
+    
+    // выводим первые n дробей
+    cin >> n;
+    cout << "1/1 2/1 ";
+    for (int i = 3; i <= n; i++) {
+        num = num1 + num2;
+        den = den1 + den2;
+        num1 = num2;
+        den1 = den2;
+        num2 = num;
+        den2 = den;
+        cout << num << "/" << den << " ";
+    }
+    cout << endl;
+    
+    // проверяем, больше ли сумма первых n дробей числа A
+    cin >> A;
+    num1 = 1;
+    den1 = 1;
+    num2 = 2;
+    den2 = 1;
+    int sum_num = 3;
+    int sum_den = 2;
+    for (int i = 3; i <= n; i++) {
+        num = num1 + num2;
+        den = den1 + den2;
+        num1 = num2;
+        den1 = den2;
+        num2 = num;
+        den2 = den;
+        sum_num += num;
+        sum_den += den;
+    }
+    double sum = sum_num / (double) sum_den;
+    if (sum > A) {
+        cout << "Sum is greater than A" << endl;
+    } else {
+        cout << "Sum is not greater than A" << endl;
+    }
+    return 0;
+}
+б)
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, num1 = 1, den1 = 1, num2 = 2, den2 = 1, num, den;
+    cin >> n;
+    
+    // выводим первые n дробей
+    cout << "1/1 2/1 ";
+    for (int i = 3; i <= n; i++) {
+        num = num1 + num2;
+        den = den1 + den2;
+        num1 = num2;
+        den1 = den2;
+        num2 = num;
+        den2 = den;
+        cout << num << "/" << den << " ";
+    }
+    cout << endl;
+    return 0;
+}
+
+в) Решение с помощью цикла:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, A, num1 = 1, den1 = 1, num2 = 2, den2 = 1, num, den, sum_num = 3, sum_den = 2;
+    cin >> n >> A;
+    
+    // проверяем, больше ли сумма первых n дробей числа A
+    for (int i = 3; i <= n; i++) {
+        num = num1 + num2;
+        den = den1 + den2;
+        num1 = num2;
+        den1 = den2;
+        num2 = num;
+        den2 = den;
+        sum_num += num;
+        sum_den += den;
+    }
+    double sum = sum_num / (double) sum_den;
+    if (sum > A) {
+        cout << "Sum
+is greater than A" << endl;
+    } else {
+        cout << "Sum is not greater than A" << endl;
+    }
+    return 0;
+}

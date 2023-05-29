@@ -1,0 +1,34 @@
+
+#include <iostream>
+using namespace std;
+int main() {
+    int D, M;
+    cin >> D >> M;
+    if (D == 1 && M == 1) {
+        D = 31;
+        M = 12;
+    } else if (D == 1) {
+        switch(M) {
+            case 2:
+                D = 31;
+                M--;
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+D = 31;
+                M--;
+                break;
+            default:
+                D = 28;
+                M--;
+                break;
+        }
+    } else {
+        D--;
+    }
+    cout << D << " " << M;
+    return 0;
+}
+

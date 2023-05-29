@@ -1,0 +1,10 @@
+#include <iostream>
+
+int main() {
+    double a;
+    std::cout << "Введите длину стороны квадрата: ";
+    std::cin >> a;
+    double P = 4 * a;
+    std::cout << "Периметр квадрата равен: " << P;
+    return 0;
+}

@@ -1,0 +1,21 @@
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    float L, R, S;
+    const float pi = 3.14;
+
+    cout << "Enter length of circle: ";
+    cin >> L;
+
+    R = L / (2 * pi);
+    S = pi * R * R;
+
+    cout << "Radius of circle is: " << R << endl;
+    cout << "Area of circl
+e is: " << S << endl;
+
+    return 0;
+}

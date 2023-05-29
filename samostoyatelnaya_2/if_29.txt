@@ -1,0 +1,28 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num;
+    cout << "Enter a number: ";
+    cin >> num;
+
+    if (num == 0) {
+        cout << "нулевое число";
+    } else if (num > 0) {
+        if (num % 2 == 0) {
+            cout << "положительное четное число";
+        } else {
+            cout << "положительное нечетное число";
+        }
+    } else {
+        if (num % 2 == 0) {
+            cout << "отрицательное четное число";
+        } else {
+            cout << "отрицательное нечетное число";
+        }
+    }
+
+    return 0;
+}
+

@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter n (n > 1): ";
+    cin >> n;
+    int f1 = 1, f2 = 1;
+    cout << "F_1 = 1" << endl << "F_2 = 1" << endl;
+    for (int i = 3; i <= n; i++) {
+        int fn = f1 + f2;
+        f1 = f2;
+        f2 = fn;
+        cout << "F_" << i << " = " << fn << endl;
+    }
+    return 0;
+}

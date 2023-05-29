@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float a, volume, area;
+    cout << "Enter the value of a: ";
+    cin >> a;
+    volume = pow(a, 3);
+    area = 4*a*a;
+    cout << "The volume of the cube is: " << volume << endl;
+    cout << "The area of the lateral surface of the cube is: " << area << endl;
+    return 0;
+}

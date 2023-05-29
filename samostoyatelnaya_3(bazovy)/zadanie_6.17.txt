@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double a;
+    cout << "Enter a number: ";
+    cin >> a;
+    int n;
+    double sum = 0;
+    for(n=1; ;n++){
+        sum += 1.0/n;
+        if(sum>a){
+            break;
+        }
+    }
+    for(int i=1; i<n; i++){
+        cout << i << " ";
+    }
+    return 0;
+}
+

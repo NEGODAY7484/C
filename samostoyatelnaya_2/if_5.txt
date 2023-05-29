@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, c;
+    cin >> a >> b >> c;
+    int pos_count = 0, neg_count = 0;
+    
+    if (a > 0) {
+        pos_count++;
+    }
+    else if (a < 0) {
+        neg_count++;
+    }
+    
+    if (b > 0) {
+        pos_count++;
+    }
+    else if (b < 0) {
+        neg_count++;
+    }
+    
+    if (c > 0) {
+        pos_count++;
+    }
+    else if (c < 0) {
+        neg_count++;
+    }
+    
+    cout << "Number of positive integers: " << pos_count << endl;
+    cout << "Number of negative integers: " << neg_count << endl;
+    return 0;
+}

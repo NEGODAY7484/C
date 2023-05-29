@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    double v1 = 0, v2 = 0, v3 = 1.5, vn;
+    cin >> n;
+    
+    // находим n-й член последовательности
+    for (int i = 4; i <= n; i++) {
+        vn = ((i-1) / (double) (i*i+1)) * v2 - v1 + v3;
+        v1 = v2;
+        v2 = v3;
+        v3 = vn;
+    }
+    cout << vn << endl;
+    return 0;
+}
+

@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int A, B, sum_squares = 0;
+    cout << "Enter two integers: ";
+    cin >> A >> B;
+    for(int i=A; i<=B; i++){
+        sum_squares += i*i;
+    }
+    cout << "Sum of squares: " << sum_squares;
+    return 0;
+}

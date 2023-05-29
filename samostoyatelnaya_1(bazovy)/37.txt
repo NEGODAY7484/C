@@ -1,0 +1,12 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double a, b, alpha, s;
+    cout << "Enter the values of the bases and angle: ";
+    cin >> a >> b >> alpha;
+    s = (a+b) * sqrt(a*a + b*b - 2*a*b*cos(alpha)) / 2;
+    cout << "Area is " << s << endl;
+    return 0;
+}

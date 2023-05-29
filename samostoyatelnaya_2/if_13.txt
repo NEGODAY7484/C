@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, c;
+    cin >> a >> b >> c;
+    int mid_num;
+    
+    if ((a > b && a < c) || (a < b && a > c)) {
+        mid_num = a;
+    }
+    else if ((b > a && b < c) || (b < a && b > c)) {
+        mid_num = b;
+    }
+    else {
+        mid_num = c;
+    }
+    
+    cout << "Middle number: " << mid_num << endl;
+    return 0;
+}

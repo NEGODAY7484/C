@@ -1,0 +1,14 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float X, A, Y;
+    cin >> X >> A >> Y;
+    float pricePerKg = A / X;
+    cout << "Price per kg: " << pricePerKg << endl;
+    float priceY = pricePerKg * Y;
+    cout << "Price for Y kg: " << priceY << endl;
+    return 0;
+}

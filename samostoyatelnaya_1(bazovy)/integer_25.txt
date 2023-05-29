@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int k;
+    cin >> k;
+    int dayOfWeek = (k + 3) % 7;
+    cout << dayOfWeek;
+    return 0;
+}

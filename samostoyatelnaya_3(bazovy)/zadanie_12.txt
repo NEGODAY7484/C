@@ -1,0 +1,13 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    const double p0 = 1.29;
+    const double z = -0.00012;
+    for (int h = 0; h <= 1000; h += 100) {
+        double p = p0 * pow(M_E, z*h);
+        cout << "Высота: " << h << " м, плотность воздуха: " << p << " кг/м^3" << endl;
+    }
+    return 0;
+}

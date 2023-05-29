@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int unit;
+    float length;
+    cin >> unit >> length;
+    switch(unit) {
+        case 1:
+            length /= 10;
+            break;
+        case 2:
+            length *= 1000;
+            break;
+        case 3:
+            break;
+        case 4:
+            length /= 1000;
+            break;
+        case 5:
+            length /= 100;
+            break;
+        default:
+            cout << "ошибка";
+            return 0;
+    }
+    cout << length;
+    return 0;
+}
+

@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int sum = 0;
+    int term = 2;
+    for (int i = 2; i <= 10; i++) {
+        sum += term;
+        term *= 2;
+    }
+    cout << "Sum of terms: " << sum << endl;
+    return 0;
+}
+

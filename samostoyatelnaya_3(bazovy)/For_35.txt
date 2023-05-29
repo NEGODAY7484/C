@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter n (n > 2): ";
+    cin >> n;
+    int a1 = 1, a2 = 2, a3 = 3;
+    cout << "A_1 = 1" << endl << "A_2 = 2" << endl << "A_3 = 3" << endl;
+    for (int i = 4; i <= n; i++) {
+        int ak = a[i-1] + a[i-2] - 2*a[i-3];
+        cout << "A_" << i << " = " << ak << endl;
+        a1 = a2;
+        a2 = a3;
+        a3 = ak;
+    }
+    return 0;
+}

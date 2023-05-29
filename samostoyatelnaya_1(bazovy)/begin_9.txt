@@ -1,0 +1,18 @@
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    float a, b, geometric;
+
+    cout << "Enter two non-negative numbers: ";
+    cin >> a >> b;
+
+    geometric = sqrt(a * b);
+
+    cout << "Geometric mean of " << a << " and " << b << " is: " << geometric << endl;
+
+    return 0;
+}
+

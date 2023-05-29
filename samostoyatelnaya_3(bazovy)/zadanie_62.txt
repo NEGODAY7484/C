@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double grades1[20];
+    double grades2[20];
+    double sum1 = 0, sum2 = 0;
+    for (int i = 0; i < 20; i++) {
+        cin >> grades1[i];
+        sum1 += grades1[i];
+    }
+    for (int i = 0; i < 20; i++) {
+        cin >> grades2[i];
+        sum2 += grades2[i];
+    }
+    double avg1 = sum1 / 20;
+    double avg2 = sum2 / 20;
+    cout << "Средняя оценка в первом классе: " << avg1 << endl;
+    cout << "Средняя оценка во втором классе: " << avg2 << endl;
+    return 0;
+}

@@ -1,0 +1,67 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num;
+    cin >> num;
+    if (num < 100 || num > 999) {
+        cout
+<< "Invalid input" << endl;
+        return 0;
+    }
+    int first_digit = num / 100;
+    int second_digit = (num / 10) % 10;
+    int last_digit = num % 10;
+    switch(first_digit) {
+        case 1: cout << "сто "; break;
+        case 2: cout << "двести "; break;
+        case 3: cout << "триста "; break;
+        case 4: cout << "четыреста "; break;
+        case 5: cout << "пятьсот "; break;
+        case 6: cout << "шестьсот "; break;
+        case 7: cout << "семьсот "; break;
+        case 8: cout << "восемьсот "; break;
+        case 9: cout << "девятьсот "; break;
+    }
+    switch(second_digit) {
+        case 1: {
+            switch(last_digit) {
+                case 0: cout << "десять"; return 0;
+                case 1: cout << "одинадцать"; return 0;
+                case 2: cout << "двенадцать"; return 0;
+                case 3: cout << "тринадцать"; return 0;
+                case 4: cout << "четырнадцать"; return 0;
+                case 5: cout << "пятнадцать"; return 0;
+                case 6: cout << "шестнадцать"; return 0;
+                case 7: cout << "семнадцать"; return 0;
+                case 8: cout << "восемнадцать"; return 0;
+                case 9: cout << "девятнадцать"; return 0;
+            }
+        }
+        case 2: cout << "двадцать "; break;
+        case 3: cout << "тридцать "; break;
+        case 4: cout << "сорок "; break;
+        case 5: cout << "пятьдесят "; break;
+        case 6: cout << "шестьдесят "; break;
+        case 7: cout << "семьдесят "; break;
+        case 8: cout << "восемьдесят "; break;
+        case 9: cout << "девяносто "; break;
+    }
+    if (second_digit != 1) {
+        switch(last_digit) {
+            case 1: cout << "один"; break;
+            case 2: cout << "два"; break;
+            case 3: cout << "три"; break;
+            case 4: cout << "четыре"; break;
+            case 5: cout << "пять"; break;
+            case 6: cout << "шесть"; break;
+            case 7: cout << "семь"; break;
+            case 8: cout << "восемь"; break;
+            case 9: cout << "девять"; break;
+        }
+    }
+    cout << endl;
+    return 0;
+}
+

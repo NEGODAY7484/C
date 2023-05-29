@@ -1,0 +1,14 @@
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    float h, R, dist;
+    R = 6350; //радиус Земли
+    cout << "Enter the height above Earth's surface: ";
+    cin >> h;
+    dist = sqrt(pow(R + h, 2) - pow(R, 2));
+    cout << "The distance to the horizon is: " << dist << endl;
+    return 0;
+}

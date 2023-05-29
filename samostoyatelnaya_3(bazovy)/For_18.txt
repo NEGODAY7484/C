@@ -1,0 +1,15 @@
+#include <iostream>
+#include <cmath>
+
+int main() {
+    double a, result = 1;
+    int n;
+    std::cin >> a >> n;
+    double power = 1;
+    for (int i = 1; i <= n; i++) {
+        power *= -1 * a;
+        result += power;
+    }
+    std::cout << result;
+    return 0;
+}

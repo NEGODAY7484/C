@@ -1,0 +1,26 @@
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    double x, ln_x, term;
+    const int n = 10; // граница ряда
+    ln_x = x = 0.0; // первый член ряда
+    cout << "Enter x: ";
+    cin >> x;
+    if (fabs(x) >= 1.0) // проверка на корректность ввода
+    {
+        cout << "Invalid input!" << endl;
+        return 0;
+    }
+    for (int i = 1; i <= n; i++)
+    {
+        term = pow(-1, i + 1) * pow(x, 2 * i - 1) / (2 * i - 1); // вычисляем очередной член ряда
+        ln_x += term;
+    }
+    cout << "ln(1 + " << x << ") = " << ln_x << endl;
+    return 0;
+}
+

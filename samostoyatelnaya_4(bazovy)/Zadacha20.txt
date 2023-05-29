@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[16];
+    int replace_count = 0;
+    for (int i = 0; i < 16; i++) {
+        cin >> arr[i];
+        if (arr[i] % 3 == 0) {
+            arr[i] = 0;
+            replace_count++;
+        }
+    }
+    cout << "Number of replacements: " << replace_count << endl;
+    return 0;
+}

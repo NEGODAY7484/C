@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double p;
+    cin >> p;
+    double distance = 10;
+    double total_distance = 10;
+    int days = 1;
+    while (total_distance <= 200) {
+        distance *= (1 + p / 100);
+        total_distance += distance;
+        days++;
+    }
+    cout << days << " " << total_distance << endl;
+    return 0;
+}

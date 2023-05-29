@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float arr[18];
+    float pos_product = 1;
+    float neg_sum = 0;
+    for (int i = 0; i < 18; i++) {
+        cin >> arr[i];
+        if (arr[i] > 0) {
+            pos_product *= arr[i];
+        } else if (arr[i] < 0) {
+            neg_sum += abs(arr[i]);
+        }
+    }
+    float result = pos_product / neg_sum;
+    cout << "Result: " << result << endl;
+    return 0;
+}

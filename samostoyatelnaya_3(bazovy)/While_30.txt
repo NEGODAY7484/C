@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int A, B, C;
+    cout << "Enter A, B, C: ";
+    cin >> A >> B >> C;
+
+    int count = 0;
+
+    for (int i = C; i <= A && i <= B; i += C)
+    {
+        count += (A - i) / C + 1 * (B - i) / C;
+    }
+
+    cout << count << endl;
+
+    return 0;
+}

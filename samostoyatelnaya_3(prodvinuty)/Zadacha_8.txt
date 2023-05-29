@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n, double_fact = 1;
+    cout << "Enter n: ";
+    cin >> n;
+    if (n % 2 == 0) // проверка на четность
+    {
+        for (int i = 2; i <= n; i += 2)
+        {
+            double_fact *= i; // вычисляем двойной факториал
+        }
+        cout << n << "!! = " << double_fact << endl;
+    }
+    else
+    {
+        cout << "Invalid input!" << endl;
+    }
+    return 0;
+}
+

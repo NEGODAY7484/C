@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    int a = 1, b = 1;
+    while (b < n) {
+        int temp = a + b;
+        a = b;
+        b = temp;
+    }
+    if (b == n) {
+        cout << "True" << endl;
+    } else {
+        cout << "False" << endl;
+    }
+    return 0;
+}

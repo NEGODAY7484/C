@@ -1,0 +1,20 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    float arr[12];
+    int count = 0;
+    float total = 0;
+    cin >> arr[11]; // last element
+    for (int i = 0; i < 11; i++) {
+        cin >> arr[i];
+        if (arr[i] < arr[11]) {
+            count++;
+            total += arr[i];
+        }
+    }
+    cout << "Number of elements less than last: " << count << endl;
+    cout << "Sum of elements less than last: " << total << endl;
+    return 0;
+}

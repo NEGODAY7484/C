@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[17];
+    int negative_sum = 0;
+    int negative_count = 0;
+    int positive_sum = 0;
+    int positive_count = 0;
+    for (int i = 0; i < 17; i++) {
+        cin >> arr[i];
+        if (arr[i] < 0) {
+            negative_sum += abs(arr[i]);
+            negative_count++;
+        } else {
+            positive_sum += arr[i];
+            positive_count++;
+        }
+    }
+    double negative_mean = 0;
+    if (negative_count > 0) {
+        negative_mean = negative_sum / (double)negative_count;
+    }
+    double positive_mean = 0;
+    if (positive_count > 0) {
+        positive_mean = positive_sum / (double)positive_count;
+    }
+    double abs_negative_mean = negative_mean * -1;
+    double mean = (abs_negative_mean + positive_mean) / 2.0;
+    int sum = 0;
+    for (int i = 0; i < 17; i++) {
+        if (abs(arr[i]) > mean) {
+            sum += arr[i];
+        }
+    }
+    cout << "Сумма элементов, абсолютное значение которых больше среднеарифметического модулей отрицательных элементов: " << sum << endl;
+    return 0;
+}

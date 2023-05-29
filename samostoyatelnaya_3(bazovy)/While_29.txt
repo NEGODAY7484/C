@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    double E;
+    cout << "Enter E: ";
+    cin >> E;
+
+    double A1 = 1, A2 = 2, AK;
+    int K = 3;
+
+    while (true)
+    {
+        AK = (A_K-2 + 2 * A_K-1) / 3;
+
+        if (abs(AK - A_K-1) < E)
+        {
+            cout << "K = " << K << ", A_K-1 = " << A_K-1 << ", A_K = " << AK << endl;
+            break;
+        }
+
+        A_K-2 = A_K-1;
+        A_K-1 = AK;
+        K++;
+    }
+
+    return 0;
+}
+

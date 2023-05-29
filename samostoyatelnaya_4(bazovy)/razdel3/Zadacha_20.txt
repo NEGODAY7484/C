@@ -1,0 +1,27 @@
+w#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[6][8];
+    int product = 1;
+
+    // заполнение массива случайными значениями
+    for (int i = 0; i < 6; i++) {
+        for (int j = 0; j < 8; j++) {
+            arr[i][j] = rand() % 10;
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    // вычисление произведения положительных элементов первого столбца
+    for (int i = 0; i < 6; i++) {
+        if (arr[i][0] > 0) {
+            product *= arr[i][0];
+        }
+    }
+
+    cout << "Произведение положительных элементов первого столбца: " << product << endl;
+
+    return 0;
+}

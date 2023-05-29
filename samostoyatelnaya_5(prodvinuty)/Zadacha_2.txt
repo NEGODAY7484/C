@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+const int TERMS = 10;
+
+double compute_sin(double x) {
+    double result = 0;
+    for (int n = 0; n < TERMS; n++) {
+        result += pow(-1, n) * pow(x, 2*n+1) / tgamma(2*n+2);
+    }
+    return result;
+}
+
+int main() {
+    double x;
+    cout << "Enter the value of x in radians: ";
+    cin >> x;
+    double result = compute_sin(x);
+    cout << "The sin of " << x << " is: " << result << endl;
+    return 0;
+}

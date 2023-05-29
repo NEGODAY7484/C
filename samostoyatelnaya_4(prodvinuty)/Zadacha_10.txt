@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int n, k;
+    double e, sum = 0, me = 0;
+    cout << "Enter the number of values in the distribution: ";
+    cin >> n;
+    double E[n], P[n];
+    cout << "Enter the values of the distribution and their respective probabilities:\n";
+    for (int i = 0; i < n; i++) {
+        cin >> E[i] >> P[i];
+        me += E[i] * P[i];
+    }
+    cout << "Enter the order of the central moment to be calculated: ";
+    cin >> k;
+    for (int i = 0; i < n; i++) {
+        sum += pow((E[i] - me), k) * P[i];
+    }
+    cout << "The central moment of order " << k << " is: " << sum << endl;
+    return 0;
+}

@@ -1,0 +1,41 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main() {
+  int n, m;
+  cin >> n >> m;
+  int arr[n][m];
+  srand(time(0));
+  for(int i = 0; i < n; i++){
+    for(int j = 0; j < m; j++){
+      arr[i][j] = rand() % 100;
+      cout << arr[i][j] << " ";
+    }
+    cout << endl;
+  }
+
+  int min_val = 100;
+  int min_row = -1;
+  for(int i = 0; i < n; i++){
+    if(arr[i][i] < min_val){
+      min_val = arr[i][i];
+      min_row = i;
+    }
+  }
+
+  if(min_row != -1){
+    cout << "Removing row #" << min_row << endl;
+    for(int i = 0; i < n; i++){
+      if(i != min_row){
+        for(int j = 0; j < m; j++){
+          cout << arr[i][j] << " ";
+        }
+        cout << endl;
+      }
+    }
+  }
+  return 0;
+}
+

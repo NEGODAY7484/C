@@ -1,0 +1,44 @@
+#include <iostream>
+#include <set>
+#include <algorithm>
+using namespace std;
+
+int main() {
+  int n, m;
+  cin >> n >> m;
+  int arr[n][m];
+
+  set<int> row_set;
+  for(int i = 0; i < n; i++){
+    bool has_duplicate = false;
+    row_set.clear();
+    for(int j = 0; j < m; j++){
+      cin >> arr[i][j];
+      if(row_set.count(arr[i][j]) > 0){
+        has_duplicate = true;
+      }
+      else{
+        row_set.insert(arr[i][j]);
+      }
+    }
+    if(!has_duplicate){
+      for(int j = 0; j < m; j++){
+        arr[i][j] = -1;
+      }
+    }
+  }
+
+  for(int i = 0; i < n; i++){
+    bool is_blank = true;
+    for(int j = 0; j < m; j++){
+      if(arr[i][j] != -1){
+        is_blank = false;
+        cout << arr[i][j] << " ";
+      }
+    }
+    if(!is_blank){
+      cout << endl;
+    }
+  }
+  return 0;
+}

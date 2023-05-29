@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+const int TERMS = 10;
+
+double compute_exp(double x) {
+    double result = 0;
+    for (int n = 0; n < TERMS; n++) {
+        result += pow(x, n) / tgamma(n+1);
+    }
+    return result;
+}
+
+int main() {
+    double x;
+    cout << "Enter the value of x: ";
+    cin >> x;
+    double result = compute_exp(x);
+    cout << "The exponent of " << x << " is: " << result << endl;
+    return 0;
+}

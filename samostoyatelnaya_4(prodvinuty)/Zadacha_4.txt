@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double a11, a12, a21, a22;
+    cout << "Введите элементы матрицы A(2x2):\n";
+    cin >> a11 >> a12 >> a21 >> a22;
+    double D = (a11-a22)*(a11-a22) + 4*a12*a21;
+    if (D >= 0) {
+        double l1 = (a11 + a22 + sqrt(D))/2;
+        double l2 = (a11 + a22 - sqrt(D))/2;
+        cout << "Собственные значения матрицы A:\n";
+        cout << "l1 = " << l1 << endl;
+        cout << "l2 = " << l2 << endl;
+    } else {
+        double Re = (a11 + a22)/2;
+        double Im = sqrt(-D)/2;
+        cout << "Собственные значения матрицы A:\n";
+        cout << "l1 = " << Re << " + i" << Im << endl;
+        cout << "l2 = " << Re << " - i" << Im << endl;
+    }
+    return 0;
+}

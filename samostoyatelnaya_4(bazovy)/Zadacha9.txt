@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[15];
+    double sum = 0;
+    for (int i = 0; i < 15; i++) {
+        cin >> arr[i];
+        sum += arr[i];
+    }
+    double mean = sum / 15.0;
+    int new_arr
+[15];
+    for (int i = 0; i < 15; i++) {
+        new_arr[i] = arr[i] - mean;
+        cout << new_arr[i] << " ";
+    }
+    cout << endl;
+    return 0;
+}

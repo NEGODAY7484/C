@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int salary[12][3];
+    int totalSum = 0;
+    int totalSalary[3] = {0, 0, 0};
+
+    // ввод данных
+    for (int i = 0; i < 12; i++) {
+        for (int j = 0; j < 3; j++) {
+            cout << "Введите зарплату работника " << i + 1 << " за месяц " << j + 1 << ": ";
+            cin >> salary[i][j];
+            totalSum += salary[i][j];
+            totalSalary[j] += salary[i][j];
+        }
+    }
+
+    // вывод результатов
+    cout << "Общая сумма, выплаченная за квартал всем работникам: " << totalSum << endl;
+
+    for (int i = 0; i < 12; i++) {
+        int sum = 0;
+        for (int j = 0; j < 3; j++) {
+            sum += salary[i][j];
+        }
+        cout << "Зарплата работника " << i + 1 << " за квартал: " << sum << endl;
+    }
+
+    for (int i = 0; i < 3; i++) {
+        cout << "Общая зарплата всех работников за " << i + 1 << " месяц: " << totalSalary[i] << endl;
+    }
+
+    return 0;
+}

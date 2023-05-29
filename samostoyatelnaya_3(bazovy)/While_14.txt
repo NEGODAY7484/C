@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a;
+    cin >> a;
+    double sum = 0;
+    int k = 1;
+    while (sum < a) {
+        sum += 1.0 / k;
+        k++;
+    }
+    cout << k - 2 << endl;
+    return 0;
+}

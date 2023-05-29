@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+double percent(double num, double percentage) {
+    double result = (percentage/100) * num;
+    return result;
+}
+
+int main() {
+    double num, percentage;
+    cout << "Enter a number and percentage value: ";
+    cin >> num >> percentage;
+    cout << percentage << "% of " << num << " is: " << percent(num, percentage) << endl;
+    return 0;
+}

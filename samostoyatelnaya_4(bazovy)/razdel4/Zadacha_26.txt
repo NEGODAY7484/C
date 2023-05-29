@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    const int SIZE = 3;
+    int arr[SIZE][SIZE] = {{1, 2, 3}, {2, 5, 7}, {3, 7, 1}};
+    bool is_not_symmetric = false;
+
+    for (int i = 0; i < SIZE; i++)
+    {
+        for (int j = i+1; j < SIZE; j++)
+        {
+            if (arr[i][j] != arr[j][i])
+            {
+                is_not_symmetric = true;
+                break;
+            }
+        }
+        if (is_not_symmetric)
+        {
+            break;
+        }
+    }
+
+    if (is_not_symmetric)
+    {
+        cout << "Array is not symmetric" << endl;
+    }
+    else
+    {
+        cout << "Array is symmetric" << endl;
+    }
+
+    return 0;
+}
+

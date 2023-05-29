@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int N = 4;   // размер матрицы
+    int arr[N][N];
+    int count = 0;
+
+    // заполнение массива случайными значениями
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            arr[i][j] = rand() % 10 - 5;   // учитываем отрицательные значения
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    // подсчет количества отрицательных элементов во втором столбце
+    for (int i = 0; i < N; i++) {
+        if (arr[i][1] < 0) {
+            count++;
+        }
+    }
+
+    cout << "Количество отрицательных элементов во втором столбце: " << count << endl;
+
+    return 0;
+}

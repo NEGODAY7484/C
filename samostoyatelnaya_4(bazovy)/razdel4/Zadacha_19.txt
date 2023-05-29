@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int n = 8, m = 5;
+    int arr[n][m] = {{3,2,1,4,5}, {4,5,6,3,2}, {9,8,7,1,2}, {2,1,6,7,5}, {4,6,8,2,1}, {2,5,3,6,1}, {7,8,6,5,3}, {1,
+9,8,7,6}};
+
+    int sum_col = 0;
+    for(int i = 0; i < n; i++) {
+        sum_col += arr[i][1];
+    }
+    cout << "Sum of second column: " << sum_col << endl;
+
+    int sum_row = 0;
+    for(int j = 0; j < m; j++) {
+        sum_row += arr[2][j];
+    }
+    cout << "Sum of third row: " << sum_row << endl;
+
+    return 0;
+}

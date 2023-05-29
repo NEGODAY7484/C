@@ -1,0 +1,34 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    const int N = 5;
+    double values[N];
+    double probs[N];
+    double ME = 0; // математическое ожидание
+    double MEx2 = 0; // математическое ожидание квадрата
+    double DE = 0; // дисперсия
+    cout << "Введите значения случайной величины:\n";
+    for (int i = 0; i < N; i++) {
+        cin >> values[i];
+    }
+    cout << "Введите вероятности значений случайной величины:\n";
+    double sumProbs = 0;
+    for (int i = 0; i < N; i++) {
+        cin >> probs[i];
+        sumProbs += probs[i];
+    }
+    if (sumProbs != 1) {
+        cout << "Ошибка! Сумма вероятностей должна быть равна 1.\n";
+        return 1;
+    }
+    for (int i = 0; i < N; i++) {
+        ME += values[i] * probs[i];
+        MEx2 += values[i] * values[i] * probs[i];
+    }
+    DE = MEx2 - ME*ME;
+    cout << "Дисперсия случайной величины равна " << DE << endl;
+    return 0;
+}

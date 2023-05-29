@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int min(int a, int b) {
+    if (a < b) {
+        return a;
+    }
+    else {
+        return b;
+    }
+}
+
+int main() {
+    int a, b;
+    cout << "Enter two integers: ";
+    cin >> a >> b;
+    int min_a_b = min(a, b);
+    int min_2a_b = min(2*a, b);
+    int min_2b = min(2*b, b);
+    int z = min(a, 3*b)*min(2*a-b, 2*b);
+    cout << "z = " << z << endl;
+    return 0;
+}
+
+

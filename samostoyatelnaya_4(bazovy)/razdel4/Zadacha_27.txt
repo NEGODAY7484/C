@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    const int N = 10, M = 10;
+    int arr[N][M] = {0};
+
+    for (int i = 0; i < N*M; i++)
+    {
+        arr[i/M][i%M] = (i/M) * (i%M);
+    }
+
+    for (int i = 0; i < N; i++)
+    {
+        for (int j = 0; j < M; j++)
+        {
+            cout << arr[i][j] << "\t";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+

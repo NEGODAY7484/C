@@ -1,0 +1,25 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+bool ascending(int a, int b) {
+    return a < b;
+}
+
+bool descending(int a, int b) {
+    return a > b;
+}
+
+int main() {
+    int arr[14];
+    for (int i = 0; i < 14; i++) {
+        cin >> arr[i];
+    }
+    sort(arr, arr + 7, ascending);
+    sort(arr + 7, arr + 14, descending);
+    for (int i = 0; i < 14; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+    return 0;
+}

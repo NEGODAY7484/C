@@ -1,0 +1,23 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+bool descending(int a, int b) {
+    return a > b;
+}
+
+int main() {
+    int arr[15];
+    for (int i = 0; i < 15; i++) {
+        cin >> arr[i];
+    }
+    sort(arr, arr + 15, descending);
+    int max_value = arr[0];
+    int min_value = arr[14];
+    int sum = max_value + min_value;
+    int diff = max_value - min_value;
+    cout << "Сумма максимального и минимального элементов: " << sum << endl;
+    cout << "Разность максимального и минимального элементов: " << diff << endl;
+    return 0;
+}
+

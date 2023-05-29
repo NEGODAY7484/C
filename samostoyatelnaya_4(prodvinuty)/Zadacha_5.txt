@@ -1,0 +1,13 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    double a11, a12, a13, a21, a22, a23, a31, a32, a33;
+    cout << "Введите элементы матрицы A(3x3):\n";
+    cin >> a11 >> a12 >> a13 >> a21 >> a22 >> a23 >> a31 >> a32 >> a33;
+    double detA = a11*(a22*a33 - a23*a32) - a12*(a21*a33 - a23*a31) + a13*(a21*a32 - a22*a31);
+    cout << "Определитель матрицы A равен " << detA << endl;
+    return 0;
+}

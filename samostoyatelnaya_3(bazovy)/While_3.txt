@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int N,K;
+    cin >> N >> K;
+    int res=0;
+    while(N>=K)
+    {
+        N-=K;
+        res++;
+    }
+    cout << "Частное: " << res << endl;
+    cout << "Остаток: " << N << endl;
+    return 0;
+}

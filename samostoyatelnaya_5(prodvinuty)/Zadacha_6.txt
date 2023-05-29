@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+const int TERMS = 10;
+
+double compute_ln(double x) {
+    double result = 0;
+    for (int n = 0; n < TERMS; n++) {
+        result += pow(-1, n) * pow(x, 2*n+1) / (2*n+1);
+    }
+    return result;
+}
+
+int main() {
+    double x;
+    cout << "Enter the value of x such that |x| < 1: ";
+    cin >> x;
+    if (abs(x) >= 1) {
+        cout << "Error: |x| must be less than 1." << endl;
+        return 1;
+    }
+    double result = compute_ln(x);
+    cout << "The natural logarithm of (1 + " << x << ") is: " << result << endl;
+    return 0;
+}

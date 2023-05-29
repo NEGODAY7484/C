@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    double x, sin_x, term, fact;
+    const int n = 10; // граница ряда
+    sin_x = x; // первый член ряда
+    fact = 1.0; // знаменатель первого члена
+    cout << "Enter x in radians: ";
+    cin >> x;
+    for (int i = 1; i <= n; i++)
+    {
+        fact *= (2 * i) * (2 * i + 1); // вычисляем знаменатель
+        term = pow(-1, i) * pow(x, 2 * i + 1) / fact; // вычисляем очередной член ряда
+        sin_x += term;
+    }
+    cout << "sin(" << x << ")/" << x << " = " << sin_x << endl;
+    return 0;
+}

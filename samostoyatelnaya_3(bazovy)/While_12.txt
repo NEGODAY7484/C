@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    int sum = 0;
+    int k = 1;
+    while (sum + k <= n) {
+        sum += k;
+        k++;
+    }
+    cout << k - 1 << endl;
+    return 0;
+}

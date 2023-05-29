@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+double polynomial_value(double coeffs[], int n, double x){
+    double value = 0.0;
+    for(int i=0; i<n; i++){
+        value += coeffs[i]*pow(x,n-i-1);
+    }
+    ret
+urn value;
+}
+
+int main(){
+    int n;
+    cout<<"Enter the degree of the polynomial: ";
+    cin>>n;
+    double coeffs[n];
+    cout<<"Enter the coefficients of the polynomial: ";
+    for(int i=0; i<n; i++){
+        cin>>coeffs[i];
+    }
+    double x;
+    cout<<"Enter the value of x for which the polynomial is to be calculated: ";
+    cin>>x;
+    double value = polynomial_value(coeffs, n, x);
+    cout<<"The value of the polynomial at x="<<x<<" is "<<value<<endl;
+    return 0;
+}

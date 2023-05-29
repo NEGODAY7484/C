@@ -1,0 +1,16 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double p;
+    cin >> p;
+    double sum = 1000;
+    int months = 0;
+    while (sum < 1100) {
+        sum *= (1 + p / 100);
+        months++;
+    }
+    cout << months << " " << sum << endl;
+    return 0;
+}

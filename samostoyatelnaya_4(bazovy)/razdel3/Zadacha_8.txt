@@ -1,0 +1,31 @@
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cout << "Enter the size of the square matrix: ";
+    cin >> n;
+
+    float arr[n][n], min, product = 1;
+
+    for(int i=0; i<n; i++)
+    {
+        min = FLT_MAX;
+        fo
+r(int j=0; j<n; j++)
+        {
+            cin >> arr[i][j];
+            if(arr[i][j] < min)
+            {
+                min = arr[i][j];
+            }
+        }
+        product *= min;
+    }
+
+    cout << "Product of minimum elements in each column: " << product << endl;
+
+    return 0;
+}

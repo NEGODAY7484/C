@@ -1,0 +1,35 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+  int n, m, val;
+  int count = 0;
+  cin >> n >> m >> val;
+  int arr[n][m];
+
+  for(int i = 0; i < n; i++){
+    for(int j = 0; j < m; j++){
+      cin >> arr[i][j];
+      if(abs(arr[i][j]) > val){
+        count++;
+      }
+    }
+  }
+
+  int c_arr[count];
+  int idx = 0;
+  for(int i = 0; i < n; i++){
+    for(int j = 0; j < m; j++){
+      if(abs(arr[i][j]) > val){
+        c_arr[idx++] = arr[i][j];
+      }
+    }
+  }
+
+  cout << count << " elements found: ";
+  for(int i = 0; i < count; i++){
+    cout << c_arr[i] << " ";
+  }
+  return 0;
+}

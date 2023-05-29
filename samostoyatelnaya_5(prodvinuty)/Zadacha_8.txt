@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int double_factorial(int n) {
+    if (n == 0 || n == 1) {
+        return 1;
+    }
+    else {
+        return n * double_factorial(n-2);
+    }
+}
+
+int main() {
+    int n;
+    cout << "Enter the value of n: ";
+    cin >> n;
+    int result = double_factorial(n);
+    cout << "The double factorial of " << n << " is: " << result << endl;
+    return 0;
+}
+

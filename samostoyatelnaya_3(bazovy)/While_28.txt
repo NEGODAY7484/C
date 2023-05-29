@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double epsilon;
+    cin >> epsilon;
+    double a = 2;
+    double b = 1;
+    int k = 2;
+    double abs_diff = abs(a - b);
+    while (abs_diff >= epsilon) {
+        double temp = a;
+        a = 2 + 1.0 / b;
+        b = temp;
+        abs_diff = abs(a - b);
+        k++;
+    }
+    cout << k << " " << b << " " << a << endl;
+    return 0;
+}

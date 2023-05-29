@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{
+    srand(time(0));
+    const int N = 10;
+    int arr[N];
+    for (int i = 0; i < N; i++) {
+        arr[i] = rand() % 100;
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+    int min = arr[0];
+    for (int i = 1; i < N; i++) {
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+    }
+    cout << "Наименьший элемент массива равен " << min << endl;
+    return 0;
+}

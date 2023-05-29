@@ -1,0 +1,47 @@
+#include<iostream>
+using namespace std;
+
+double polynomial_value(double coeffs[], int n, double x){
+    double value = 0.0;
+    for(int i=0; i<n; i++){
+        value += coeffs[i]*pow(x,n-i-1);
+    }
+    return value;
+}
+
+double bisection(double coeffs[], int n, double a, double b, double tol=0.0001, int max_iter=100){
+    double c, fc;
+    int iter = 0;
+    while(abs(b-a)>tol && iter<max_iter){
+        c = (a+b)/2;
+        fc = polynomial_value(coeffs, n, c);
+        if(fc==0){
+            break;
+        }
+        if(polynomial_value(coeffs,n,a)*fc<0){
+            b = c;
+        }
+        else{
+            a = c;
+        }
+        iter++;
+    }
+    return c;
+}
+
+int main(){
+    int n;
+    cout<<"Enter the degree of the polynomial: ";
+    cin>>n;
+    double coeffs[n];
+    cout<<"Enter the coefficients of the polynomial: ";
+    for(int i=0; i<n; i++){
+        cin>>coeffs[i];
+    }
+    double a,b;
+    cout<<"Enter the interval [a,b] within which the root lies: ";
+    cin>>a>>b;
+    double root = bisection(coeffs, n, a, b);
+    cout<<"The root of the polynomial is: "<<root<<endl;
+    return 0;
+}

@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    bool has_odd = false;
+    while (n > 0) {
+        int digit = n % 10;
+        if (digit % 2 == 1) {
+            has_odd = true;
+            break;
+        }
+        n /= 10;
+    }
+    if (has_odd) {
+        cout << "True" << endl;
+    } else {
+        cout << "False" << endl;
+    }
+    return 0;
+}

@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cin >> n;
+    int res=0;
+    while(n%2==0)
+    {
+        n/=2;
+        res++;
+    }
+    if(n!=1)
+        cout << "Введенное число не является степенью числа 2" << endl;
+    else
+        cout << "Показатель степени: " << res << endl;
+    return 0;
+}

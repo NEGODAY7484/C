@@ -1,0 +1,46 @@
+#include<iostream>
+using namespace std;
+
+double polynomial_value(double coeffs[], int n, double x){
+    double value = 0.0;
+    for(int i=0; i<n; i++){
+        value += coeffs[i]*pow(x,n-i-1);
+    }
+    return value;
+}
+
+double chord_method(double coeffs[], int n, double a, double b, double tol=0.0001, int max_iter=100){
+    double c_old = a;
+    double c_new = (a*polynomial_value(coeffs, n, b) - b*polynomial_value(coeffs, n, a))/(polynomial_value(coeffs, n, b) - polynomial_value(coeffs, n, a));
+    int iter = 0;
+    while(abs(c_new-c_old)>tol &&
+abs(polynomial_value(coeffs,n,c_new))>tol && iter<max_iter){
+        c_old = c_new;
+        c_new = (a*polynomial_value(coeffs, n, b) - b*polynomial_value(coeffs, n, a))/(polynomial_value(coeffs, n, b) - polynomial_value(coeffs, n, a));
+        if(polynomial_value(coeffs, n, c_new)*polynomial_value(coeffs, n, a)<0){
+            b = c_new;
+        }
+        else{
+            a = c_new;
+        }
+        iter++;
+    }
+    return c_new;
+}
+
+int main(){
+    int n;
+    cout<<"Enter the degree of the polynomial: ";
+    cin>>n;
+    double coeffs[n];
+    cout<<"Enter the coefficients of the polynomial: ";
+    for(int i=0; i<n; i++){
+        cin>>coeffs[i];
+    }
+    double a,b;
+    cout<<"Enter the interval [a,b] within which the root lies: ";
+    cin>>a>>b;
+    double root = chord_method(coeffs, n, a, b);
+    cout<<"The root of the polynomial is: "<<root<<endl;
+    return 0;
+}

@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    const double g = 9.81; // ускорение свободного падения
+    double v, a, t = 0.0, dt, x, y;
+    cout << "Enter initial velocity v (m/s): ";
+    cin >> v;
+    cout << "Enter launch angle a (degrees): ";
+    cin >> a;
+    a = a * M_PI / 180; // переводим градусы в радианы
+    cout << "Enter time step dt (s): ";
+    cin >> dt;
+    x = y = 0.0;
+    cout << "t = " << t << ", x = " << x << ", y = " << y << endl;
+    while (y >= 0) // пока тело находится в воздухе
+    {
+        t += dt; // увеличиваем время на dt
+        x = v * cos(a) * t; // вычисляем координату x
+        y = v * sin(a) * t - 0.5 * g * t * t; // вычисляем координату y
+        cout << "t = " << t << ", x = " << x << ", y = " << y << endl;
+    }
+    return 0;
+}

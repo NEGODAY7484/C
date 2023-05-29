@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+  int arr[n][n] = {};
+
+  int row = 0, col = 0;
+  int num = 1, limit = n * n;
+
+  while(num <= limit){
+    while(col < n && arr[row][col] == 0){ // move right
+      arr[row][col++] = num++;
+    }
+    col--;
+    row++;
+    while(row < n && arr[row][col] == 0){ // move down
+      arr[row++][col] = num++;
+    }
+    row--;
+    col--;
+    while(col >= 0 && arr[row][col] == 0){ // move left
+      arr[row][col--] = num++;
+    }
+    col++;
+    row--;
+    while(row >= 0 && arr[row][col] == 0){ // move up
+      arr[row--][col] = num++;
+    }
+    row++;
+    col++;
+  }
+
+  for(int i = 0; i < n; i++){
+    for(int j = 0; j < n; j++){
+      cout << arr[i][j] << "\t";
+    }
+    cout << endl;
+  }
+  return 0;
+}

@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int max(int a, int b) {
+    if (a > b) {
+        return a;
+    }
+    else {
+        return b;
+    }
+}
+
+int main() {
+    int a, b;
+    cout << "Enter two integers: ";
+    cin >> a >> b;
+    int max_a_b = max(a, b);
+    int max_2a_b = max(2*a, b);
+    int max_2b = max(2*b, b);
+    int z = max(2*b*max_2a_b, max_a_b*max_2b);
+    cout << "z = " << z << endl;
+    return 0;
+}

@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    double a, x, y, n, s, s_error;
+    const double S_exact = (15.0 / 8 - 2 * log(2)) * M_PI; // точное значение S
+    const int N = 100000; // число случайных точек
+    srand(time(NULL)); // инициализируем генератор случайных чисел
+    cout << "Enter a: ";
+    cin >> a;
+    s = 0.0; // начальное значение площади
+    for (int i = 0; i < N; i++)
+    {
+        x = (double) rand() / RAND_MAX * 2 * a - a; // генерируем случайную точку в пределах кривой
+        y = (double) rand() / RAND_MAX * a; // генерируем случайную точку в пределах прямой
+        if (y <= a * a / x) // проверяем, находится ли точка внутри тела
+        {
+            s += 1.0; // увеличиваем площадь
+        }
+    }
+    s /= N; // делим на количество точек
+    s *= 4 * a * a; // масштабируем площадь
+    s_error = fabs(s - S_exact) / S_exact; // вычисляем относительную ошибку
+    cout << "S = " << s << ", S_exact = " << S_exact << ", error = " << s_error << endl;
+    return 0;
+}

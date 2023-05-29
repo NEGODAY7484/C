@@ -1,0 +1,40 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+const int MAX = 100;
+
+int main(){
+    double a[MAX], x0, tol;
+    int N;
+    cout << "Enter the degree of the polynomial N: ";
+    cin >> N;
+    cout << "Enter the coefficients of the polynomial: " << endl;
+    for(int i=-1; i<=N; i++){
+        cin >> a[i];
+    }
+    cout << "Enter the initial point x0: ";
+    cin >> x0;
+    cout << "Enter the tolerance: ";
+    cin >> tol;
+    double fx0 = 0.0, fp0 = 0.0;
+    for(int i=-1; i<=N; i++){
+        fx0 += a[i]*pow(x0,i);
+        fp0 += a[i]*i*pow(x0,i-1);
+    }
+    double x1 = x0 - fx0/fp0;
+    int iter = 0;
+    while(abs(x1-x0) > tol){
+        x0 = x1;
+        fx0 = 0.0, fp0 = 0.0;
+        for(int i=-1; i<=N; i++){
+            fx0 += a[i]*pow(x0,i);
+            fp0 += a[i]*i*pow(x0,i-1);
+        }
+        x1 = x0 - fx0/fp0;
+        iter++;
+    }
+    cout << "The root of the polynomial is: " << x1 << endl;
+    cout << "Number of iterations: " << iter << endl;
+    return 0;
+}

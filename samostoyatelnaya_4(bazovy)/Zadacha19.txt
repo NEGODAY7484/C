@@ -1,0 +1,24 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[19];
+    int sum = 0;
+    bool negative_found = false;
+    for (int i = 0; i < 19; i++) {
+        cin >> arr[i];
+        if (arr[i] < 0) {
+            negative_found = true;
+        }
+        if (!negative_found) {
+            sum += arr[i];
+        }
+    }
+    if (!negative_found) {
+        cout << "No negative elements found." << endl;
+    } else {
+        cout << "Sum of elements before first negative: " << sum << endl;
+    }
+    return 0;
+}
